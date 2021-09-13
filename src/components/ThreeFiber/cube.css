@@ -1,0 +1,12 @@
+
+
+
+.cube-wrapper {
+    background-color: black;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.cube-wrapper h3 {
+    margin: 0px;
+}

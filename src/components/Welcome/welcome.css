@@ -1,0 +1,31 @@
+
+
+.welcome-wrapper {
+    max-height: calc(100vh - 50px);
+}
+
+.portfolio-image {
+    max-height: calc(100vh - 50px);
+    width: 100%;
+    object-fit: cover;
+}
+
+.welcome-content {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow:
+    0 0 20px 20px rgba(255, 255, 255, 0.75),
+    0 0 40px rgba(0, 81, 255, 0.3),
+    0 0 60px rgba(255, 0, 200, 0.3),
+    0 0 80px rgba(0, 183, 255, 0.3),
+    0 0 100px rgba(68, 0, 255, 0.2),
+    0 0 120px rgba(111, 0, 255, 1)
+    ;
+    /* border: 1px solid rgba(0, 0, 0, 0.0); */
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    top: 30%;
+    left: 35%;
+}
