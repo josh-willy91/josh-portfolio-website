@@ -12,26 +12,78 @@ function Portfolio() {
       <div className='portfolio-content'>
         <div className='project-feature'>
           <Project source='images/robinhood/robinhood-landing.JPG' />
-        </div>
-        <div className='info-feature'>
-          <p className='top'>This is a clone of Robinhood. The front end is built using
+          <p className='project-details'>
+            <a href='https://robinhood-clone-jjeg.herokuapp.com/'
+              target="_blank"
+              rel="noopener noreferrer">Live</a> |
+            <a href='https://github.com/josh-willy91/Robinhood-clone'
+              target="_blank"
+              rel="noopener noreferrer">Repo</a>
+            <br/>
+            This is a clone of Robinhood. The front end is built using
             React/Redux. The back end if built with Python using Flask, SQLAlchemy,
             and postgreSQL.
           </p>
+        </div>
+        <div className='info-feature'>
           <p className='bottom'>More porjects... email or connect on LinkedIn if you have questions</p>
         </div>
         <div className='top-left'>
-          <Project source='images/robinhood/robinhood-landing.JPG' />
+          <Project source='images/bookYeah/bookYeah-landing.JPG' />
+          <p className='project-details'>
+            <a href='https://book-yeah-flight-search-app.herokuapp.com/'
+              target="_blank"
+              rel="noopener noreferrer">Live</a> |
+            <a href='https://github.com/josh-willy91/flight_booking_clone'
+              target="_blank"
+              rel="noopener noreferrer">Repo</a>
+            <br/>
+            This is a flight finder/booking app. The front end is built using
+            React/Redux. The back end if built with Python using Flask, SQLAlchemy,
+            and postgreSQL.
+          </p>
         </div>
         <div className='top-right'>
-          <Project source='images/bookYeah/bookYeah-landing.JPG' />
+          <Project source='images/goodClips/goodClips-movies.JPG' />
+          <p className='project-details'>
+            <a href='https://github.com/josh-willy91/group-project-12'
+              target="_blank"
+              rel="noopener noreferrer">Live</a> |
+            <a href='https://github.com/josh-willy91/group-project-12'
+              target="_blank"
+              rel="noopener noreferrer">Repo</a>
+            <br/>
+            This project is a clone of GoodReads but with movies.
+            The front end is built using HTML, CSS, and Pug which is a
+            templating engine. The back end if built with Node.js,
+            Express, Sequelize, and postgreSQL.
+          </p>
         </div>
         <div className='bottom-left'>
-          <Project source='images/goodClips/goodClips-movies.JPG' />
-        </div>
-        <div className='bottom-right'>
           <Project source='images/native/native-home.JPG' />
+          <p className='project-details'>
+            <a href='https://github.com/josh-willy91/native-soloProject'
+              target="_blank"
+              rel="noopener noreferrer">Live</a> |
+            <a href='https://github.com/josh-willy91/native-soloProject'
+              target="_blank"
+              rel="noopener noreferrer">Repo</a>
+            <br/>
+            This is a clone of MeetUp. The front end is built using
+            React/Redux. The back end if built with Node.js, Express,
+            Sequelize, and postgreSQL.
+          </p>
         </div>
+        {/* <div className='bottom-right'>
+          <Project source='images/robinhood/robinhood-landing.JPG' />
+          <p className='project-details'>
+            <a>Live</a> | <a>Repo</a>
+            <br/>
+            This is a clone of Robinhood. The front end is built using
+            React/Redux. The back end if built with Python using Flask, SQLAlchemy,
+            and postgreSQL.
+          </p>
+        </div> */}
       </div>
     </div>
   );
@@ -45,5 +97,3 @@ export default Portfolio;
   //   <Cube position={[-1.2, 0, 0]} />
   //   <Cube position={[1.2, 0, 0]} />
   // </Canvas>
-
-  // heroku create josh-portfolio-website --buildpack mars/create-react-app

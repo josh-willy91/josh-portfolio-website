@@ -5,6 +5,7 @@ import Cube from "./components/ThreeFiber/Cube";
 import Plane from "./components/ThreeFiber/Plane";
 
 import Navigation from "./components/Navigation/Navigation";
+import Footer from "./components/Footer/Footer";
 import Welcome from "./components/Welcome/Welcome";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Portfolio from "./components/Portfolio/Portfolio";
@@ -29,6 +30,7 @@ function App() {
           </Canvas>
         </Route> */}
       </Switch>
+      <Footer />
     </>
   );
 }
