@@ -44,14 +44,15 @@
     grid-area: info-feature;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     width: 100%;
+    margin-top: 50px;
 }
 
-.info-feature .bottom {
+.info-feature p {
     display: flex;
     color: white;
+    margin: 0px;
 }
 
 .top-left {

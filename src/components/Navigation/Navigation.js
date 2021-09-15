@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 
 function Navigation() {
+
   return (
-    <nav>
+    <nav className='navbar'>
       <NavLink exact to="/">Welcome</NavLink>
       <NavLink to="/portfolio">Porfolio</NavLink>
       <NavLink to="/about-me">About Me</NavLink>
