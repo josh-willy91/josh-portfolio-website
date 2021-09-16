@@ -3,78 +3,60 @@ import react, { useState, useEffect } from 'react';
 import Cube from '../ThreeFiber/Cube';
 import { Canvas } from '@react-three/fiber';
 import Project from './Project/Project';
+import Carousel from './Carousel.js/Carousel';
 import './portfolio.css'
 
 function Portfolio() {
 
-    const images =
-    ['images/robinhood/robinhood-landing.JPG',
+  const images = [
+    'images/robinhood/robinhood-landing.JPG',
     'images/robinhood/robinhood-home.JPG',
     'images/robinhood/robinhood-search.JPG',
     'images/robinhood/robinhood-stock.JPG',
   ]
   // const [i, setI] = useState(0);
   const [hover, setHover] = useState(false);
-  const [sourceImg, setSourceImg] = useState(images)
-  const [switcher, setSwitcher] = useState(false)
+  const [sourceImg, setSourceImg] = useState(images);
+  const [switcher, setSwitcher] = useState(false);
+  const [onClick, setOnClick] = useState(false);
+
+  console.log(onClick, '========onClick==========')
+
+  // useEffect(() => {
+  //   setOnClick(false)
+  // }, [onClick])
+
+  const handleClick = () => {
+
+  }
 
 
+  // useEffect(() => {
 
-  useEffect(() => {
+  //   setInterval(() => {
+  //     let array = sourceImg
+  //     let temp = sourceImg.splice(0, 1);
+  //     console.log(temp, sourceImg, '============temp============')
 
-    setInterval(() => {
-      let array = sourceImg
-      let temp = sourceImg.splice(0, 1);
-      console.log(temp, sourceImg, '============temp============')
+  //     // array.push(...temp)
 
-      // array.push(...temp)
+  //     setSourceImg([...sourceImg, ...temp])
+  //     console.log(sourceImg, '=========line 33==================')
+  //   }, 3000)
 
-      setSourceImg([...sourceImg, ...temp])
-      console.log(sourceImg, '=========line 33==================')
-
-
-    }, 3000)
-
-  }, [sourceImg])
+  // }, [sourceImg])
 
   // console.log(hover, '==============hover=====================')
   // const [source, setSource] = useState(false);
-
-
-  // function robinhoodImages() {
-  //   const images =
-  //   ['images/robinhood/robinhood-landing.JPG',
-  //   'images/robinhood/robinhood-home.JPG',
-  //   'images/robinhood/robinhood-search.JPG',
-  //   'images/robinhood/robinhood-stock.JPG',
-  // ]
-  // // let switchImage;
-  //   let source = images[0];
-  //   let newSource = '';
-
-  //   for(let i = 1; i < images.length; i++) {
-  //     let last = images[i - 1]
-  //     // console.log(last, '====last====')
-  //     if(source === last) {
-  //       newSource = images[i];
-  //       // console.log(array[i], '============array[i]=================')
-  //       // console.log(newSource, '============newSource=================')
-  //       console.log(newSource, '=============newSource==================')
-  //       return newSource
-  //     };
-  //   }
-  //   return source
-  // };
-  // let source = robinhoodImages();
-  // let source = 'images/robinhood/robinhood-landing.JPG';
-  // console.log(source, '===========47===============')
 
 
   return (
     <div className='portfolio-wrapper'>
       <div className='portfolio-content'>
         <div className='project-feature'
+          // onMouseOver={() => mouseOver()} onMouseLeave={() => count = 0}
           // onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)}
+          onClick={() => setOnClick(true)}
           >
           <Project source={sourceImg[0]} />
           <p className='project-details'>
@@ -135,8 +117,9 @@ function Portfolio() {
             Sequelize, and postgreSQL.
           </p>
         </div>
-        {/* <div className='bottom-right'>
-          <Project source='images/robinhood/robinhood-landing.JPG' />
+        <div className='bottom-right' onClick={() => setOnClick(true)} >
+          {/* <Project source='images/robinhood/robinhood-landing.JPG' /> */}
+          <Carousel images={images} onClick={onClick} setOnClick={setOnClick} />
           <p className='project-details'>
             <a>Live</a> | <a>Repo</a>
             <br/>
@@ -144,7 +127,7 @@ function Portfolio() {
             React/Redux. The back end if built with Python using Flask, SQLAlchemy,
             and postgreSQL.
           </p>
-        </div> */}
+        </div>
       </div>
     </div>
   );
