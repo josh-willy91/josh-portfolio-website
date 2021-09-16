@@ -8,57 +8,43 @@ import './portfolio.css'
 
 function Portfolio() {
 
-  const images = [
+  const [featureCount, setFeatureCount] = useState(0);
+  const [topLeftCount, setTopLeftCount] = useState(0);
+  const [topRightCount, setTopRightCount] = useState(0);
+  const [bottomLeftCount, setBottomLeftCount] = useState(0);
+
+  const bookYeahImages = [
+    'images/bookYeah/bookYeah-landing.JPG',
+    'images/bookYeah/bookYeah-home.JPG',
+    'images/bookYeah/bookYeah-search.JPG',
+    'images/bookYeah/bookYeah-dashboard.JPG',
+  ]
+
+  const robinhoodImages = [
     'images/robinhood/robinhood-landing.JPG',
     'images/robinhood/robinhood-home.JPG',
     'images/robinhood/robinhood-search.JPG',
     'images/robinhood/robinhood-stock.JPG',
   ]
-  // const [i, setI] = useState(0);
-  const [hover, setHover] = useState(false);
-  const [sourceImg, setSourceImg] = useState(images);
-  const [switcher, setSwitcher] = useState(false);
-  const [onClick, setOnClick] = useState(false);
 
-  console.log(onClick, '========onClick==========')
+  const goodClipsImages = [
+    'images/goodClips/goodClips-auth.JPG',
+    'images/goodClips/goodClips-movies.JPG',
+    'images/goodClips/goodClips-profile.JPG',
+    'images/goodClips/goodClips-search.JPG',
+  ]
 
-  // useEffect(() => {
-  //   setOnClick(false)
-  // }, [onClick])
-
-  const handleClick = () => {
-
-  }
-
-
-  // useEffect(() => {
-
-  //   setInterval(() => {
-  //     let array = sourceImg
-  //     let temp = sourceImg.splice(0, 1);
-  //     console.log(temp, sourceImg, '============temp============')
-
-  //     // array.push(...temp)
-
-  //     setSourceImg([...sourceImg, ...temp])
-  //     console.log(sourceImg, '=========line 33==================')
-  //   }, 3000)
-
-  // }, [sourceImg])
-
-  // console.log(hover, '==============hover=====================')
-  // const [source, setSource] = useState(false);
+  const nativeImages = [
+    'images/native/native-event.JPG',
+    'images/native/native-home.JPG',
+  ]
 
 
   return (
     <div className='portfolio-wrapper'>
       <div className='portfolio-content'>
-        <div className='project-feature'
-          // onMouseOver={() => mouseOver()} onMouseLeave={() => count = 0}
-          // onMouseOver={() => setHover(true)} onMouseLeave={() => setHover(false)}
-          onClick={() => setOnClick(true)}
-          >
-          <Project source={sourceImg[0]} />
+        <div className='project-feature' >
+          <Carousel images={robinhoodImages} count={featureCount} setCount={setFeatureCount} />
           <p className='project-details'>
             <a href='https://robinhood-clone-jjeg.herokuapp.com/'
               target="_blank"
@@ -75,7 +61,7 @@ function Portfolio() {
           <p>More noteable porjects...</p>
         </div>
         <div className='top-left'>
-          <Project source='images/bookYeah/bookYeah-landing.JPG' />
+          <Carousel images={bookYeahImages} count={topLeftCount} setCount={setTopLeftCount} />
           <p className='project-details'>
             <a href='https://book-yeah-flight-search-app.herokuapp.com/'
               target="_blank"
@@ -89,7 +75,7 @@ function Portfolio() {
           </p>
         </div>
         <div className='top-right'>
-          <Project source='images/goodClips/goodClips-movies.JPG' />
+          <Carousel images={goodClipsImages} count={topRightCount} setCount={setTopRightCount} />
           <p className='project-details'>
             <a href='https://github.com/josh-willy91/group-project-12'
               target="_blank"
@@ -104,7 +90,7 @@ function Portfolio() {
           </p>
         </div>
         <div className='bottom-left'>
-          <Project source='images/native/native-home.JPG' />
+          <Carousel images={nativeImages} count={bottomLeftCount} setCount={setBottomLeftCount} />
           <p className='project-details'>
             <a href='https://github.com/josh-willy91/native-soloProject'
               target="_blank"
@@ -117,9 +103,8 @@ function Portfolio() {
             Sequelize, and postgreSQL.
           </p>
         </div>
-        <div className='bottom-right' onClick={() => setOnClick(true)} >
-          {/* <Project source='images/robinhood/robinhood-landing.JPG' /> */}
-          <Carousel images={images} onClick={onClick} setOnClick={setOnClick} />
+        {/* <div className='bottom-right' >
+          <Carousel images={bookYeahImages} count={count} setCount={setCount} />
           <p className='project-details'>
             <a>Live</a> | <a>Repo</a>
             <br/>
@@ -127,7 +112,7 @@ function Portfolio() {
             React/Redux. The back end if built with Python using Flask, SQLAlchemy,
             and postgreSQL.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

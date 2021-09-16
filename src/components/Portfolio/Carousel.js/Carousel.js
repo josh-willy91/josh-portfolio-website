@@ -1,34 +1,36 @@
 import React, { useEffect } from 'react';
 import './carousel.css'
 
-function Carousel({images, onClick, setOnClick}) {
+function Carousel({ images, count, setCount }) {
 
 
-    const imageArray = images.length;
-    let count = 0;
+    const imagesLength = images.length -2;
+    console.log(imagesLength)
 
-
-    useEffect(() => {
-
-        if(onClick) {
-            if(count === 4) {
-                count = 0;
+    function handleClick(direction) {
+        if(direction === 'right') {
+            if (count > imagesLength) {
+                setCount(0);
             } else {
-                count += 1;
+                setCount(count + 1);
             };
+        } else {
+            if(count < 1) {
+                setCount(imagesLength + 1)
+            } else {
+                setCount(count -1)
+            }
         };
-        setOnClick(false)
-    }, [onClick])
+    };
 
-    console.log(count, '======count=========')
-    console.log(images[count], '======image=========')
+
     return (
         <div className='carousel-wrapper'>
-            <div className='arrow-wrapper'>
+            <div className='arrow-wrapper' onClick={() => handleClick('left')}>
                 <span className='arrowLeft'></span>
             </div>
             <img src={images[count]} />
-            <div className='arrow-wrapper'>
+            <div className='arrow-wrapper' onClick={() => handleClick('right')} >
                 <span className='arrowRight'></span>
             </div>
         </div>
