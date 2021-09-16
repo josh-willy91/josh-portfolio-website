@@ -1,14 +1,30 @@
+import './about.css'
+
 
 
 function AboutMe() {
 
   return (
-    <div>
-      <h2>My Journey</h2>
-      <a href="https://docs.google.com/document/d/1Bk2e_8zqZpqO8VYFDYviTC_qWTCnUgqFI82-8jpf_w8/edit?usp=sharing">Resume</a>
-      <p>fv sdv dvasd vvdfsv vsas vasfv fvadvbsdg fsdvasv vasfv
-        vasdva vasdv davd v fdf sv vs vsfv vafvatbgt sdfd fbbf
-      </p>
+    <div className='about-wrapper'>
+      <div className='about-content'>
+        <h2>My Journey</h2>
+        <p>
+          {/* As I sat on a plane heading to Vienna, Austria to meet with Peter, the owner of Traiskirchen's
+          baseball club, I would not have guessed my journey would lead me to become a software developer. */}
+
+
+        </p>
+        <h2>Contact Me</h2>
+        <p>
+          Contact me via email or linkedIn message for project collabs or anything else
+          <br/>
+          <br/>
+          Email: jwilly91812@yahoo.com
+        </p>
+      </div>
+      <div className='diamond-content'>
+        <img className='diamond-image' src='images/about-images.JPG'></img>
+      </div>
     </div>
   );
 }
