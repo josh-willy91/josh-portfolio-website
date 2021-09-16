@@ -46,6 +46,7 @@ function Portfolio() {
         <div className='project-feature' >
           <Carousel images={robinhoodImages} count={featureCount} setCount={setFeatureCount} />
           <p className='project-feature__details'>
+            <h2>Robinhood Clone</h2>
             <a href='https://robinhood-clone-jjeg.herokuapp.com/'
               target="_blank"
               rel="noopener noreferrer">Live</a> | <a href='https://github.com/josh-willy91/Robinhood-clone'
@@ -63,6 +64,7 @@ function Portfolio() {
         <div className='top-left'>
           <Carousel images={bookYeahImages} count={topLeftCount} setCount={setTopLeftCount} />
           <p className='project-details'>
+            <h3>Flight Search App</h3>
             <a href='https://book-yeah-flight-search-app.herokuapp.com/'
               target="_blank"
               rel="noopener noreferrer">Live</a> | <a href='https://github.com/josh-willy91/flight_booking_clone'
@@ -77,6 +79,7 @@ function Portfolio() {
         <div className='top-right'>
           <Carousel images={goodClipsImages} count={topRightCount} setCount={setTopRightCount} />
           <p className='project-details'>
+            <h3>GoodReads Clone</h3>
             <a href='https://github.com/josh-willy91/group-project-12'
               target="_blank"
               rel="noopener noreferrer">Live</a> | <a href='https://github.com/josh-willy91/group-project-12'
@@ -92,6 +95,7 @@ function Portfolio() {
         <div className='bottom-left'>
           <Carousel images={nativeImages} count={bottomLeftCount} setCount={setBottomLeftCount} />
           <p className='project-details'>
+            <h3>MeetUp Clone</h3>
             <a href='https://github.com/josh-willy91/native-soloProject'
               target="_blank"
               rel="noopener noreferrer">Live</a> | <a href='https://github.com/josh-willy91/native-soloProject'

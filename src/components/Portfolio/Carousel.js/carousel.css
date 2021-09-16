@@ -37,6 +37,11 @@
     border-right: solid black 3px;
 }
 
+.arrow-wrapper:hover .arrowLeft {
+    border-bottom: solid black 3px;
+    border-left: solid black 3px;
+}
+
 .arrowRight {
     min-height: 15px;
     min-width: 15px;
@@ -53,4 +58,15 @@
     border-bottom: solid black 2px;
     border-left: solid black 2px;
     transform: rotate(45deg);
+}
+
+.project-feature__details h2 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin: 0px;
+}
+
+.project-details h3 {
+    margin: 0px;
+    padding-bottom: 5px;
 }
