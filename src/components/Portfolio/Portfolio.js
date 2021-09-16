@@ -2,7 +2,6 @@
 import react, { useState, useEffect } from 'react';
 import Cube from '../ThreeFiber/Cube';
 import { Canvas } from '@react-three/fiber';
-import Project from './Project/Project';
 import Carousel from './Carousel.js/Carousel';
 import './portfolio.css'
 
