@@ -13,7 +13,7 @@
 }
 
 .about-content {
-    padding-top: 10%;
+    padding-top: 7%;
     padding-left: 15%;
     width: 30%;
 }
@@ -26,8 +26,9 @@
 
 .about-content p {
     width: 100%;
-    padding-top: 15px;
+    padding-top: 5px;
     margin-bottom: 100px;
+    letter-spacing: 1px;
 }
 
 .diamond-content {
@@ -37,7 +38,7 @@
     height: 650px;
     margin-top: 5%;
     margin-left: 10%;
-    background-color: white;
+    background-color: rgb(20, 20, 20);
 }
 
 .diamond-image {
