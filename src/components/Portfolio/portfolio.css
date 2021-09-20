@@ -24,18 +24,32 @@
     min-height: calc(100vh - 50px);
 }
 
-.skills-content {
+.skills-wrapper {
     grid-area: skills;
-    height: 200px;
+    min-height: 250px;
     width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+.skills-wrapper h2 {
+    text-align: center;
+}
+
+.skills-content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .skills-icons {
-    height: 50px;
+    height: 75px;
     object-fit: cover;
     background-color: white;
+    padding: 15px;
 }
 
 .project-feature {
