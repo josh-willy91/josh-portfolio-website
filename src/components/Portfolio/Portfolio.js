@@ -42,6 +42,22 @@ function Portfolio() {
   return (
     <div className='portfolio-wrapper'>
       <div className='portfolio-content'>
+        <div className='skills-content'>
+          <h3>Technologies</h3>
+          <img className='skills-icons' src='images/icons/python.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/javascript.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/python.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/node.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/express.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/react.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/reactredux.jpg' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/flask.jpg' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/sqlalchemy.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/sequelize.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/css.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/html.png' alt='technology'></img>
+          <img className='skills-icons' src='images/icons/html.png' alt='technology'></img>
+        </div>
         <div className='project-feature' >
           <Carousel images={robinhoodImages} count={featureCount} setCount={setFeatureCount} />
           <p className='project-feature__details'>
