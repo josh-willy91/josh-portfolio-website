@@ -98,7 +98,7 @@ function Portfolio() {
             <h3>GoodReads Clone</h3>
             <a href='https://github.com/josh-willy91/group-project-12'
               target="_blank"
-              rel="noopener noreferrer">Live</a> | <a href='https://github.com/josh-willy91/group-project-12'
+              rel="noopener noreferrer">Live</a> | <a href='https://github.com/josh-willy91/goodClips'
               target="_blank"
               rel="noopener noreferrer">Repo</a>
             <br/>
